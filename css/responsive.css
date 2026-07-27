@@ -1,0 +1,444 @@
+/* ===== MOBILE (320px - 767px) ===== */
+@media (max-width: 767px) {
+    :root {
+        --font-size-h1: 1.75rem;
+        --font-size-h2: 1.5rem;
+        --font-size-h3: 1.25rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+
+    /* HEADER */
+    header {
+        flex-wrap: wrap;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .logo-container {
+        flex: 1;
+    }
+
+    header .logo {
+        max-width: 50px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: rgba(26, 58, 82, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: var(--spacing-md);
+        z-index: 999;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: var(--spacing-sm);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.95rem;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 250px;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* CARDS */
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-lg) var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    /* SEÇÕES */
+    section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .page-title {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .page-title h1 {
+        font-size: 1.75rem;
+    }
+
+    /* ABOUT QUICK */
+    .about-quick {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        text-align: left;
+    }
+
+    /* CONTACT GRID */
+    .contact-grid,
+    .contact-methods-grid,
+    .hours-container,
+    .info-grid,
+    .sacraments-grid,
+    .activities-grid,
+    .communities-grid,
+    .communities-list-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-item {
+        padding: var(--spacing-md);
+    }
+
+    .contact-item img {
+        max-width: 50px;
+    }
+
+    .contact-icon {
+        max-width: 50px;
+    }
+
+    /* LOCALIZAÇÃO */
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .map-container iframe {
+        min-height: 300px;
+    }
+
+    /* FORMULÁRIO */
+    .form-section {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        max-width: 100%;
+    }
+
+    .schedule {
+        grid-template-columns: 1fr;
+    }
+
+    /* REDES SOCIAIS */
+    .social-links {
+        gap: var(--spacing-md);
+    }
+
+    .social-links img {
+        max-width: 50px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        font-size: 0.85rem;
+    }
+
+    /* CONTACT BUTTONS */
+    .contact-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .contact-buttons .btn {
+        min-width: 100%;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        gap: var(--spacing-md);
+    }
+
+    .timeline-item {
+        padding: var(--spacing-md);
+    }
+
+    /* MISSION BOX */
+    .mission-box {
+        padding: var(--spacing-md);
+    }
+
+    .mission-box h3 {
+        font-size: 1.1rem;
+    }
+
+    /* ACTIVITY ICON */
+    .activity-icon {
+        font-size: 2rem;
+    }
+
+    .activity-card h4 {
+        font-size: 1rem;
+    }
+
+    /* INFO BOX */
+    .info-box {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md) auto;
+    }
+
+    /* HOURS ITEM */
+    .hours-item h4 {
+        font-size: 1rem;
+    }
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+    /* CARDS */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+        padding: var(--spacing-lg);
+    }
+
+    /* CONTACT GRID */
+    .contact-grid,
+    .contact-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-methods-grid .contact-method-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    /* GRID LAYOUTS */
+    .sacraments-grid,
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .communities-grid,
+    .communities-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-grid .info-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    /* LOCALIZAÇÃO */
+    .location-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map-container iframe {
+        min-height: 350px;
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* CONTACT BUTTONS */
+    .contact-buttons {
+        flex-direction: row;
+    }
+
+    .contact-buttons .btn {
+        min-width: 150px;
+    }
+
+    /* HOURS CONTAINER */
+    .hours-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* SCHEDULE */
+    .schedule {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== DESKTOP (1024px+) ===== */
+@media (min-width: 1024px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+
+    /* CARDS */
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl);
+    }
+
+    /* CONTACT GRID */
+    .contact-grid,
+    .contact-methods-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* GRID LAYOUTS */
+    .sacraments-grid,
+    .activities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .communities-grid,
+    .communities-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* HERO */
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-h1);
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    /* CONTACT BUTTONS */
+    .contact-buttons {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+
+    .contact-buttons .btn {
+        flex: 1;
+        min-width: auto;
+    }
+
+    /* HOURS CONTAINER */
+    .hours-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* SCHEDULE */
+    .schedule {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* LOCALIZAÇÃO */
+    .location-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map-container iframe {
+        min-height: 400px;
+    }
+}
+
+/* ===== LARGE DESKTOP (1200px+) ===== */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .cards-container {
+        max-width: 1200px;
+    }
+
+    .form-section {
+        max-width: 700px;
+        margin: var(--spacing-xl) auto;
+    }
+
+    .location-container {
+        max-width: 1000px;
+    }
+
+    .contact-grid,
+    .contact-methods-grid {
+        max-width: 900px;
+        margin: var(--spacing-lg) auto;
+    }
+}
+
+/* ===== TRANSIÇÕES SUAVES ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

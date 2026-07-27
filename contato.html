@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato - Paróquia São Pedro e São Paulo">
+    <title>Contato - Paróquia São Pedro e São Paulo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="Assets/Logos/Logo_paróquia.png" alt="Logo Paróquia São Pedro e São Paulo" class="logo"></a>
+        </div>
+        <div class="hamburger">☰</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="missas.html">Missas & Horários</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PÁGINA TITLE -->
+        <section class="page-title">
+            <h1>Entre em Contato</h1>
+            <p>Estamos aqui para ajudar. Escolha a melhor forma de nos contactar.</p>
+        </section>
+
+        <!-- CONTATO DIRETO GRID -->
+        <section class="contact-methods">
+            <div class="contact-methods-grid">
+                <!-- Telefone -->
+                <div class="contact-method-card" id="contato-telefone">
+                    <img src="assets/Logos/Logo_telefone.png" alt="Telefone" class="contact-icon">
+                    <h3>Telefone</h3>
+                    <p class="contact-value">(11) 4167-0264</p>
+                    <p class="contact-schedule">Terça a Sábado<br>13:00 - 18:45</p>
+                    <a href="tel:+551141670264" class="btn-small">Ligar</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-method-card" id="contato-whatsapp">
+                    <img src="assets/Logos/Logo_whatsapp .png" alt="WhatsApp" class="contact-icon">
+                    <h3>WhatsApp</h3>
+                    <p class="contact-value">(11) 4167-0264</p>
+                    <p class="contact-schedule">Disponível 24h</p>
+                    <a href="https://wa.me/551141670264" class="btn-small" target="_blank">Enviar Mensagem</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-method-card" id="contato-email">
+                    <img src="assets/Logos/Logo_email.png" alt="Email" class="contact-icon">
+                    <h3>Email</h3>
+                    <p class="contact-value" id="imail">secretaria@<br>saopedroesaopaulo.com.br</p>
+                    <p class="contact-schedule" id="tlgd">Resposta em até 24h</p>
+                    <a href="mailto:secretaria@saopedroesaopaulo.com.br" class="btn-small">Enviar Email</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <section class="location-section">
+            <h2>Localização</h2>
+            <div class="location-container">
+                <div class="location-info">
+                    <h3>Endereço Completo</h3>
+                    <p>
+                        <strong>Rua Ernestina Vieira, 150</strong><br>
+                        Jardim Leopoldina<br>
+                        Carapicuíba, SP<br>
+                        CEP: 06382-260
+                    </p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=-23.551058,-46.8402197" target="_blank" class="btn">Abrir no Google Maps</a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.4159484949047!2d-46.84021972346089!3d-23.551057971229848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0c4e0c0c0c01%3A0x0!2sRua%20Ernestina%20Vieira%2C%20150%20-%20Carapicu%C3%ADba%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+        <section class="form-section">
+            <h2>Envie Sua Mensagem</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto *</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="evento">Evento</option>
+                        <option value="batismo">Batismo</option>
+                        <option value="casamento">Casamento</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem aqui..." rows="5" minlength="10" required></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Li e concordo com a política de privacidade</label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn" disabled>Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <!-- HORÁRIO FUNCIONAMENTO -->
+        <section class="hours-section">
+            <h2>Horário de Funcionamento</h2>
+            <div class="hours-container">
+                <div class="hours-item">
+                    <h4>Terça a Sábado</h4>
+                    <p>13:00 - 18:45</p>
+                </div>
+                <div class="hours-item">
+                    <h4>Domingo</h4>
+                    <p>Apenas celebrações</p>
+                </div>
+                <div class="hours-item">
+                    <h4>Segunda</h4>
+                    <p>Fechada</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Paróquia São Pedro e São Paulo. Todos os direitos reservados.</p>
+        <div class="footer-links">
+            <a href="index.html">Início</a> |
+            <a href="missas.html">Missas</a> |
+            <a href="sobre.html">Sobre</a> |
+            <a href="contato.html">Contato</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <strong>Contato:</strong> (11) 4167-0264 | secretaria@saopedroesaopaulo.com.br
+        </p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
