@@ -61,7 +61,7 @@ header {
         linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../Assets/imagens/Igreja.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center 180%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: var(--spacing-lg) var(--spacing-md);
@@ -172,7 +172,7 @@ main {
         linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../Assets/imagens/Igreja.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center 180%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 6rem var(--spacing-md) 5rem;
@@ -1214,4 +1214,36 @@ footer p {
 .contact-buttons .btn {
     flex: 1;
     min-width: 150px;
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+#back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--amarelo-principal);
+    color: var(--azul-marinho);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition), background-color var(--transition);
+    z-index: 999;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: var(--ouro);
 }
