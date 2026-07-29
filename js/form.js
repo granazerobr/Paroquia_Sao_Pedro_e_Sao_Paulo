@@ -1,7 +1,9 @@
 // ===== FORM VALIDATION =====
 document.addEventListener('DOMContentLoaded', function() {
+    const formLoadedAt = Date.now();
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
+    const websiteInput = document.getElementById('website');
     const nomeInput = document.getElementById('nome');
     const emailInput = document.getElementById('email');
     const telefoneInput = document.getElementById('telefone');
@@ -12,13 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Regex para validação de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Máscara de telefone
+    // Máscara de telefone (fixo com 8 dígitos ou celular com 9 dígitos)
     function phoneMask(value) {
-        return value
-            .replace(/\D/g, '')
-            .replace(/(\d{2})(\d)/, '($1) $2')
-            .replace(/(\d{4})(\d)/, '$1-$2')
-            .slice(0, 14);
+        const digits = value.replace(/\D/g, '').slice(0, 11);
+
+        if (digits.length <= 2) {
+            return digits.replace(/(\d{0,2})/, '($1');
+        }
+        if (digits.length <= 6) {
+            return digits.replace(/(\d{2})(\d{0,4})/, '($1) $2');
+        }
+        if (digits.length <= 10) {
+            return digits.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+        }
+        return digits.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
     }
 
     // Aplicar máscara de telefone ao digitar
@@ -88,7 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
             email: emailInput.value.trim(),
             telefone: telefoneInput.value.trim(),
             assunto: assuntoInput.value,
-            mensagem: mensagemInput.value.trim()
+            mensagem: mensagemInput.value.trim(),
+            website: websiteInput.value,
+            elapsed: Date.now() - formLoadedAt
         };
 
         // Desabilitar botão durante envio
